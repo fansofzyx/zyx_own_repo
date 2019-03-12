@@ -1,0 +1,4 @@
+#Tue Mar 12 20:38:41 CST 2019
+base.0=F\:\\zyx_own_repo\\EasyARProject\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+path.0=classes.dex
+renamed.0=classes.dex
