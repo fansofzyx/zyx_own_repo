@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_945a8ca4f8460705cb50d67ca6d589f0eeb40138.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_eff36cb3dd5776bcc7dfe63d3c4af3d7d0b02909.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\libs\jpct_ae.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d6939dc58306229d8dbc5ef8582686c1ab772d84">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\jpct_ae_88d91b0ddd4e30899a40fa95df1f7fc8a487166b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_b21b2ec1abd8f9dd4066f9068b6db6b3f28191a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\libs\EasyAR.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a927dd0d114d0323e6cdabaa7bb91be57c83ba9e">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\EasyAR_0b363dd9ca8c9869f6ee86098f5758de721c4e93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_b72eb943c680bf3d3c84f0e35b5038b9e66215d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_1553afa882f7d43a35d68f5bc043537d1bd6c82a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\AndroidP\easyARSamples\HelloARMultiTarget_MultiTracker\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_6d303b83a1d1f87635baa6b647e3db54412ff731.jar" />
+    </item>
+
+</items>
