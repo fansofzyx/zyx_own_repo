@@ -199,8 +199,8 @@ public class BoxRenderer
         GLES20.glBindBuffer(GLES20.GL_ARRAY_BUFFER, vbo_color_box);
         GLES20.glEnableVertexAttribArray(pos_color_box);
         GLES20.glVertexAttribPointer(pos_color_box, 4, GLES20.GL_UNSIGNED_BYTE, true, 0, 0);
-       // GLES20.glUniformMatrix4fv(pos_trans_box, 1, false, cameraview.data, 0);
-        //GLES20.glUniformMatrix4fv(pos_proj_box, 1, false, projectionMatrix.data, 0);
+       GLES20.glUniformMatrix4fv(pos_trans_box, 1, false, cameraview.data, 0);
+        GLES20.glUniformMatrix4fv(pos_proj_box, 1, false, projectionMatrix.data, 0);
         GLES20.glBindBuffer(GLES20.GL_ELEMENT_ARRAY_BUFFER, vbo_faces_box);
         for(int i = 0; i < 6; i++) {
             GLES20.glDrawElements(GLES20.GL_TRIANGLE_FAN, 4, GLES20.GL_UNSIGNED_SHORT, i * 4 * 2);

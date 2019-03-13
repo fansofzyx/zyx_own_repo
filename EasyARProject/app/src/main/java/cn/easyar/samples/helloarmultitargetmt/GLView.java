@@ -18,29 +18,25 @@ import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
 
-import com.threed.jpct.FrameBuffer;
-
-import java.io.BufferedReader;
-
 import cn.easyar.Engine;
 
 public class GLView extends GLSurfaceView
 {
     private HelloAR helloAR;
 
-    public GLView(final Context context)
+    public GLView(Context context)
     {
         super(context);
         setEGLContextFactory(new ContextFactory());
         setEGLConfigChooser(new ConfigChooser());
 
-        helloAR = new HelloAR();
+        helloAR = new HelloAR(context);
 
         this.setRenderer(new GLSurfaceView.Renderer() {
             @Override
             public void onSurfaceCreated(GL10 gl, EGLConfig config) {
                 synchronized (helloAR) {
-                    helloAR.initGL(context);
+                    helloAR.initGL();
                 }
             }
 
@@ -59,6 +55,7 @@ public class GLView extends GLSurfaceView
             }
         });
         this.setZOrderMediaOverlay(true);
+        this.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
     }
 
     @Override

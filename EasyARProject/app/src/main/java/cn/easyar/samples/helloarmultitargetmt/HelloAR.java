@@ -14,8 +14,6 @@ import android.content.Context;
 import android.opengl.GLES20;
 import android.util.Log;
 
-import com.threed.jpct.FrameBuffer;
-
 import cn.easyar.CameraCalibration;
 import cn.easyar.CameraDevice;
 import cn.easyar.CameraDeviceFocusMode;
@@ -39,30 +37,30 @@ public class HelloAR
     private CameraFrameStreamer streamer;
     private ArrayList<ImageTracker> trackers;
     private Renderer videobg_renderer;
-    private Obj3DRendererNew box_renderer;
-    private Obj3DRendererNew obj;
+    private Obj3DRenderer box_renderer;
     private boolean viewport_changed = false;
     private Vec2I view_size = new Vec2I(0, 0);
     private int rotation = 0;
     private Vec4I viewport = new Vec4I(0, 0, 1280, 720);
-
-    public HelloAR()
+    private Context context;
+    public HelloAR(Context context)
     {
         trackers = new ArrayList<ImageTracker>();
+        this.context = context;
     }
 
     private void loadFromImage(ImageTracker tracker, String path)
     {
         ImageTarget target = new ImageTarget();
         String jstr = "{\n"
-            + "  \"images\" :\n"
-            + "  [\n"
-            + "    {\n"
-            + "      \"image\" : \"" + path + "\",\n"
-            + "      \"name\" : \"" + path.substring(0, path.indexOf(".")) + "\"\n"
-            + "    }\n"
-            + "  ]\n"
-            + "}";
+                + "  \"images\" :\n"
+                + "  [\n"
+                + "    {\n"
+                + "      \"image\" : \"" + path + "\",\n"
+                + "      \"name\" : \"" + path.substring(0, path.indexOf(".")) + "\"\n"
+                + "    }\n"
+                + "  ]\n"
+                + "}";
         target.setup(jstr, StorageType.Assets | StorageType.Json, "");
         tracker.loadTarget(target, new FunctorOfVoidFromPointerOfTargetAndBool() {
             @Override
@@ -167,21 +165,19 @@ public class HelloAR
         return status;
     }
 
-    public void initGL(Context context)
+    public void initGL()
     {
         if (videobg_renderer != null) {
             videobg_renderer.dispose();
         }
-        //videobg_renderer = new Renderer();
-        box_renderer = new Obj3DRendererNew(context);
-       // box_renderer = new TriangleRender();
-        box_renderer.init();
+        videobg_renderer = new Renderer();
+        box_renderer = new Obj3DRenderer();
+        box_renderer.init(context);
     }
 
     public void resizeGL(int width, int height)
     {
         view_size = new Vec2I(width, height);
-        obj.setFb(width,height);
         viewport_changed = true;
     }
 
@@ -242,8 +238,7 @@ public class HelloAR
                         continue;
                     }
                     if (box_renderer != null) {
-                        //box_renderer.render(camera.projectionGL(0.2f, 500.f), targetInstance.poseGL(), imagetarget.size());
-                        box_renderer.render();
+                        box_renderer.render(camera.projectionGL(0.2f, 500.f), targetInstance.poseGL(), imagetarget.size());
                     }
                 }
             }

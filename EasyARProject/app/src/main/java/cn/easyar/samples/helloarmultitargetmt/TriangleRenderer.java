@@ -29,7 +29,8 @@ public class TriangleRenderer {
                     "}";
 
     private int mProgram;
-
+    private int pos_trans_box;
+    private int pos_proj_box;
     static final int COORDS_PER_VERTEX = 3;
     static float triangleCoords[] = {
             -0.5f,  0.5f, 0.0f, // top
@@ -78,8 +79,6 @@ public class TriangleRenderer {
         pos_proj_box = GLES20.glGetUniformLocation(mProgram, "proj");
 
     }
-    private int pos_trans_box;
-    private int pos_proj_box;
     public void render(Matrix44F projectionMatrix, Matrix44F cameraview, Vec2F size)
     {
 
@@ -110,12 +109,13 @@ public class TriangleRenderer {
         mColorHandle = GLES20.glGetUniformLocation(mProgram, "vColor");
         GLES20.glUniformMatrix4fv(pos_proj_box, 1, false, projectionMatrix.data, 0);
         GLES20.glUniformMatrix4fv(pos_trans_box, 1, false, cameraview.data, 0);
+
         //设置绘制三角形的颜色
         GLES20.glUniform4fv(mColorHandle, 1, color, 0);
         //绘制三角形
         GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, vertexCount);
         //禁止顶点数组的句柄
-        GLES20.glDisableVertexAttribArray(mPositionHandle);
+       // GLES20.glDisableVertexAttribArray(mPositionHandle);
     }
     public int  loadShader(int type,String shaderCode)
     {
